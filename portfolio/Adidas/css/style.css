@@ -1,0 +1,347 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  letter-spacing: 0.4rem;
+}
+
+button{
+  background-color: black;
+  height: 50px;
+  width: 343px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+button:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid black;
+  top: 2px;
+  right: -4px;
+}
+
+/* Aviso */
+header{
+  border-bottom: 1px solid rgb(228, 228, 228);
+  padding-bottom: 20px;
+}
+
+.aviso{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  background: black;
+}
+
+.aviso ul{
+  list-style: none;
+  letter-spacing: 0.1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 70%;
+  color: white;
+}
+
+/* Nav-bar */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.logo{
+  margin-left: 20px;
+  flex: 1;
+}
+
+.nav-links{
+  flex: 2 200px;
+}
+
+.nav-links ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.nav-links ul li{
+  align-self: flex-end;
+  padding: 0 15px;
+  letter-spacing: 0.1rem;
+  font-size: 80%;
+}
+
+.nav-form{
+  flex: 1 1;
+  display: flex;
+  margin-right: 100px;
+  align-items: flex-end;
+  height: 30px;
+}
+
+.form-procurar input{
+  height: 30px;
+  padding: 10px;
+  width: 175px;
+  margin-right: 10px;
+  background: #EBEDEE url("../img/search\ 1.png") no-repeat right center;
+  border: none;
+
+}
+
+.carrinho{
+  width: 30px;
+}
+
+.carrinho img{
+  max-width: 100%;
+}
+
+/* section-principal */
+.section-principal{
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.principal-info h1{
+  margin-bottom: 20px;
+  font-size: 180%;
+}
+
+.principal-info p{
+  width: 400px;
+}
+
+.principal-info button{
+  margin-top: 20px;
+  width: 100%;
+}
+
+.principal-img img{
+  max-width: 100%;
+}
+
+.principal-img{
+  width: 100%;
+  max-width: 500px;
+  order: 2;
+}
+
+/* Tendencias */
+.tendencias h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 200%;
+}
+
+.produtos-tendencia{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.produtos{
+  margin-right: 30px;
+  cursor: pointer;
+  height: 385px;
+  margin: 0 auto;
+}
+
+.produtos:hover{
+  border: 1px solid black;
+}
+
+.produtos:last-child{
+  margin: none;
+}
+
+/* Newsletter */
+.newsletter{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter h1{
+  text-align: center;
+  font-size: 200%;
+  text-transform: uppercase;
+}
+
+.newsletter .form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  height: 300px;
+  width: 100%;
+  max-width: 650px;
+}
+
+.form-input{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form-input input{
+  width: 300px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.form-input label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form button{
+  height: 50px;
+  width: 100%;
+  max-width: 343px;
+  margin: 0 auto;
+}
+
+/* Animações */
+.js-section{
+  opacity: 0;
+  transform:  translate3d(-30px,0,0);
+  transition: .3s;
+}
+
+.js-section.ativo{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.produtos{
+    opacity: 0;
+    transition: .3s;
+}
+
+.produtos:nth-child(1){
+  transform: translate3d(-100px, 0, 0);
+  transition: 3s;
+}
+.produtos.ativo:nth-child(1){
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.produtos:nth-child(2){
+  transform: translate3d(-200px, 0, 0);
+  transition: 3s;
+}
+.produtos.ativo:nth-child(2){
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.produtos:nth-child(3){
+  transform: translate3d(-300px, 0, 0);
+  transition: 3s;
+}
+.produtos.ativo:nth-child(3){
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+/*media querys */
+@media (max-width: 1200px){
+  .aviso ul{
+    font-size: 60%;
+  }
+  .nav{
+    align-items: center;
+    justify-content: space-around;
+  }
+  .produtos{
+    margin-bottom: 20px;
+  }
+  .nav-form{
+    margin: 0;
+  }
+  .nav-links ul li{
+    opacity: 0;
+  }
+  .nav-links{
+    order: 1;
+    display: block;
+    flex: 1 100px;
+    background: url("../img/hamburguer.png") no-repeat center center;
+    background-size: 40px;
+    cursor: pointer;
+  }
+  .logo{
+    order: 2;
+    margin: 0;
+  }
+  .nav-form{
+    order: 3;
+  }
+}
+
+@media (max-width: 910px){
+  body{
+    font-size: 15px;
+  }
+  .aviso li:last-child{
+    display: none;
+  }
+  .principal-info{
+    order: 3;
+  }
+  .principal-img{
+    order: 1;
+  }
+  .section-principal{
+    margin: 50px 0px;
+  }
+}
+
+@media (max-width: 700px){
+  body{
+    font-size: 14px;
+  }
+  .form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .form-input input{
+    margin: 0px auto 40px auto;
+  }
+  .form-input input:last-child{
+    margin-bottom: 20px;
+  }
+  .form-procurar input{
+    width: 100px;
+  }
+}
