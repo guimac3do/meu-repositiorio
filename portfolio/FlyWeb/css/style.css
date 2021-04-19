@@ -1,0 +1,106 @@
+.container{
+    max-width: 1200px;
+}
+.bg-primary{
+    background-image: linear-gradient(70deg, #A127F5,#E831BA) !important;
+}
+
+a{
+    text-decoration: none;
+    color: #F53627;
+}
+
+.navegacao{
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1), 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary{
+    background-color: #F53627;
+    border-color: #F53627;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.1), 2px 2px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover{
+    background-color: #FF295E;
+    border-color: #FF295E;
+}
+
+.boxes{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2), 4px 4px 20px rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.boxes p{
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.img-icon{
+    margin: 0 auto 10px auto ;
+    max-width: 80px;
+}
+
+.hr{
+    color: #A127F5;
+    width: 10%;
+    min-height: 2px;
+    margin: 0 auto;    
+}
+
+hr{
+    color: #A127F5;
+    width: 10%;
+    min-height: 2px;
+    margin: 0 auto;
+}
+
+.shadow{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2), 4px 4px 20px rgba(0,0,0,0.4) !important;
+}
+
+.bg-info{
+    background-color: #A127F5 !important;
+}
+
+.bg-warning{
+    background-color: #E831BA !important;
+}
+
+.bg-secondary{
+    background-color: #F53627 !important;
+}
+
+.preços li + li{
+    margin-top: 10px;
+}
+
+.preços li{
+    font-weight: 400;
+    color: #d4d2d2;
+}
+
+.preços li::before{
+    content: "";
+    display: inline-block;
+    background-color: #0fd992;
+    position: relative;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.standard{
+    box-shadow: 4px 3px 10px rgba(0,0,0,0.3);
+}
+
+.gold{
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+}
+
+.premium{
+    box-shadow: 4px 4px 30px rgba(0,0,0,0.8);
+}
