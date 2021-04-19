@@ -94,8 +94,21 @@ p{
   color: #DBD3E0;
 }
 
-.nav-links ul a:last-child{
-  margin-right: 0;
+.nav-links ul a:hover{
+  background-color: #7918FF;
+  border-radius: 2px;
+  color: #0AC88C;
+}
+
+.nav-links ul .btn{
+  display: none;
+  margin-top: 20px;
+  color: #121214;
+}
+
+.nav-links ul .btn:hover{
+  background-color: #0AC88C;
+  color: #121214;
 }
 
 .btn-nav .btn{
@@ -541,4 +554,79 @@ svg{
     height: inherit;
     margin-bottom: 80px;
   }
+}
+
+@media (max-width: 700px){
+  .nav-links, .btn-nav{
+    display: none;
+  }
+
+  .one,
+  .two,
+  .three{
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+  }
+
+  .menu-toggle{
+    width: 40px;
+    height: 30px;
+  }
+
+  /*fullscreen*/
+  .menu-section.on{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg,#7918FF, #6930C3);
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .menu-section.on .btn-nav, .menu-section.on .nav-links{
+    display: block;
+  }
+
+  .menu-section.on .menu-toggle{
+    position: absolute;
+    right: 80px;
+    top: 15px;
+  }
+
+  .menu-section.on .menu-toggle .one{
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-section.on .menu-toggle .two{
+    opacity: 0;
+  }
+
+  .menu-section.on .menu-toggle .three{
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  .menu-section.on .nav-links ul li{
+    display: block;
+    text-align: center;
+  }
+
+  .menu-section.on .nav-links ul li a{
+    transition-duration:  0.5s;
+    font-size: 2.8rem;
+    display: block;
+    font-weight: 400;
+  }
+
+.nav-links ul li:last-child{
+  display: block;
+  }
+ 
 }
