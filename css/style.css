@@ -66,6 +66,18 @@ p{
   background-color: #0AC88C;
 }
 
+/* botão fixado */
+.btn-fixed{
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 10;
+}
+
+.btn-fixed a{
+  cursor: pointer;
+}
+
 /* nav-bar */
 .head{
   height: 60px;
@@ -133,6 +145,32 @@ p{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.principal-img{
+  animation: show 3s forwards;
+}
+
+.principal-info{
+  animation: show 4s forwards, showInfo 3s forwards;
+}
+
+@keyframes show{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes showInfo{
+  from{
+    max-height: 0;
+  }
+  to{
+    max-height: 100%;
+  }
 }
 
 .principal-img{
@@ -399,7 +437,8 @@ svg{
 
 /* dúvidas frequentes */
 .faq-lista{
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -526,6 +565,18 @@ svg{
   margin: 0;
 }
 
+/* Animation section */
+.js-section{
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: .3s;
+}
+
+.js-section.ativo{
+  opacity: 1;
+  transform: translate3d(0px,0,0);
+}
+
 /* Media-querys */
 @media (max-width: 1200px){
   .principal-img{
@@ -557,6 +608,9 @@ svg{
 }
 
 @media (max-width: 700px){
+  .portfolio-itens{
+    margin-right: 0;
+  }
   .nav-links, .btn-nav{
     display: none;
   }
