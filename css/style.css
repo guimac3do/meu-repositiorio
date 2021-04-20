@@ -312,6 +312,9 @@ svg{
   padding: 20px;
   flex: 1 300px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 360px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
   border-top: 2px solid #7918FF;
