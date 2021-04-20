@@ -1,0 +1,35 @@
+.container, .container-lg, .container-md, .container-sm, .container-xl{
+    max-width: 1300px;
+}
+
+.separador::before{
+    content: " ";
+    background-color: #0d6efd;
+    height: 20px;
+    width: 30px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.resumo-noticias{
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.resumo-titulos{
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+}
+
+#pesquisar-topo{
+    background: url(../imagens/icons/pesquisa.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 0.5vh;
+}
+
+ .form-control::placeholder{
+     color: #d1d1d1 !important;
+ }
