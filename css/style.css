@@ -501,6 +501,7 @@ svg{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0px 20px;
 }
 
 .titulo-rodape{
@@ -549,23 +550,26 @@ svg{
 .imgs-rodape{
   margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.ssl-img{
-  margin-right: 5px;
-}
-
-.garantia-img{
-  margin-left: 5px;
+.imgs-rodape img{
+  width: 100%;
+  max-width: 100px;
 }
 
 .section-footer{
+  margin-top: 20px;
+  flex: 1 200px;
+  max-width: 300px;
   margin-right: 20px;
 }
 
 .section-footer:last-child{
-  margin: 0;
+  margin-right: 0;
 }
+
 
 /* Animation section */
 .js-section{
@@ -685,4 +689,10 @@ svg{
   display: block;
   }
  
+}
+
+@media (max-width: 320px){
+  html{
+    font-size: 45%;
+  }
 }
