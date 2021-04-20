@@ -17,16 +17,51 @@ function initAcordeon(){
 }
 initAcordeon();
 
-const sections = document.querySelectorAll('.js-section');
-const windowMetade = window.innerHeight * 0.6;
+function initAnimaScroll(){
+  const sections = document.querySelectorAll('.js-section');
+  const windowMetade = window.innerHeight * 0.6;
 
-function animaScroll(){
-  sections.forEach((section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const isSectionVisible = (sectionTop - windowMetade) < 0;
-      if (isSectionVisible)
-        section.classList.add('ativo');
-  }))
+  if (sections.length){
+    function animaScroll(){
+      sections.forEach((section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = (sectionTop - windowMetade) < 0;
+          if (isSectionVisible)
+            section.classList.add('ativo');
+      }))
+    }
+
+    window.addEventListener('scroll', animaScroll);
+  }
+  }
+initAnimaScroll();
+
+
+function initScrollSuave(){
+  const linksInternos = document.querySelectorAll('a[href^="#"]')
+
+  if (linksInternos.length){
+    function scrollToSection(event){
+      event.preventDefault();
+      const href = event.currentTarget.getAttribute('href');
+      const section = document.querySelector(href);
+      // const topo = section.offsetTop;
+
+      section.scrollIntoView({
+        behavior: 'smooth',
+      });
+
+      // Forma alternativa
+      // window.scrollTo({
+      //   top: topo,
+      //   behavior: 'smooth',
+      // });
+    }
+
+    linksInternos.forEach((link) => {
+      link.addEventListener('click', scrollToSection);
+    });
+  }
 }
 
-window.addEventListener('scroll', animaScroll);
+initScrollSuave();
