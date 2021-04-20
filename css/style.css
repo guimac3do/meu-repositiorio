@@ -438,8 +438,9 @@ svg{
 /* dúvidas frequentes */
 .faq-lista{
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .faq-lista dt{
